@@ -19,7 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\lab1(E).cpp" />
+    <ClCompile Include="..\..\lab1(I).cpp" />
+    <ClCompile Include="..\..\lab1(U).cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -1,20 +1,18 @@
 #include <iostream>
+
 using namespace std;
 
 int main() {
     int number;
-    cout << "Введите трехзначное число: ";
     cin >> number;
 
-    // Извлекаем цифры
-    int hundreds = number / 100;
-    int tens = (number % 100) / 10;
-    int ones = number % 10;
+    int digit1 = number / 100;  // Первая цифра
+    int digit2 = (number / 10) % 10;  // Вторая цифра
+    int digit3 = number % 10;  // Третья цифра
 
-    // Вычисляем сумму цифр
-    int sum = hundreds + tens + ones;
+    int sum = digit1 + digit2 + digit3;
 
-    cout << "Сумма цифр: " << sum << endl;
+    cout << sum << endl;
 
     return 0;
 }

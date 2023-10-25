@@ -5,11 +5,12 @@ int main() {
     int k, m, n;
     cin >> k >> m >> n;
 
-    // Вычисляем общее время
-    int total_time = 2 * k * m;
+    int time_per_cutlet = 2 * m; // Время для одной котлеты с обеих сторон
+    int total_time = ((n + k - 1) / k) * time_per_cutlet; // Общее время для всех котлет
 
-    // Выводим результат
     cout << total_time << endl;
 
     return 0;
 }
+
+

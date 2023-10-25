@@ -1,13 +1,11 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
-// Функция для вычисления факториала
 int factorial(int n) {
-    int result = 1;
-    for (int i = 1; i <= n; ++i) {
-        result *= i;
+    if (n == 0) {
+        return 1;
     }
-    return result;
+    return n * factorial(n - 1);
 }
 
 int main() {
@@ -20,3 +18,4 @@ int main() {
 
     return 0;
 }
+

@@ -1,16 +1,14 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 int main() {
-    int rookRow, rookCol, otherRow, otherCol;
+    int Row, Col, oRow, oCol;
 
-    cout << "Введите координаты ладьи (строка столбец): ";
-    cin >> rookRow >> rookCol;
+    cin >> Row >> Col;
 
-    cout << "Введите координаты другой фигуры (строка столбец): ";
-    cin >> otherRow >> otherCol;
+    cin >> oRow >> oCol;
 
-    if (rookRow == otherRow || rookCol == otherCol) {
+    if (Row == oRow || Col == oCol) {
         cout << "YES" << endl;
     }
     else {

@@ -1,21 +1,16 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 int main() {
-    int k;
-    cin >> k;
+    int k, m, n;
+    cin >> k >> m >> n;
 
-    // Найдем квадратный корень от k
-    double n = sqrt(k);
+    int time_per_cutlet = 2 * m; // Время для поджаривания одной котлеты с обеих сторон
+    int total_time = ((n + k - 1) / k) * time_per_cutlet; // Общее время для всех котлет
 
-    // Если корень - целое число, то можно выставить фишки
-    if (n == int(n)) {
-        cout << "YES" << endl;
-    }
-    else {
-        cout << "NO" << endl;
-    }
+    cout << total_time << endl;
 
     return 0;
 }
+
+

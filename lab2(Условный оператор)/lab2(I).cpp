@@ -1,26 +1,19 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 int main() {
-    // Шаг 1: Объявляем переменные для хранения координат
-    int queenRow, queenCol, otherRow, otherCol;
+    int qRow, qCol, oRow, oCol;
 
-    // Шаг 2: Вводим координаты с клавиатуры
-    cout << "Введите координаты ферзя (строка столбец): ";
-    cin >> queenRow >> queenCol;
+    cin >> qRow >> qCol;
 
-    cout << "Введите координаты другой фигуры (строка столбец): ";
-    cin >> otherRow >> otherCol;
+    cin >> oRow >> oCol;
 
-    // Шаг 3: Проверяем, может ли ферзь атаковать другую фигуру
-    if (queenRow == otherRow || queenCol == otherCol ||
-        abs(queenRow - otherRow) == abs(queenCol - otherCol)) {
+    if (qRow == oRow || qCol == oCol || abs(qRow - oRow) == abs(qCol - oCol)) {
         cout << "YES" << endl;
     }
     else {
         cout << "NO" << endl;
     }
 
-    // Шаг 4: Завершаем программу
     return 0;
 }

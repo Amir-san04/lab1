@@ -1,16 +1,17 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
-    int k, m, n;
-    cin >> k >> m >> n;
+    int k;
+    cin >> k;
 
-    int time_per_cutlet = 2 * m; // Время для поджаривания одной котлеты с обеих сторон
-    int total_time = ((n + k - 1) / k) * time_per_cutlet; // Общее время для всех котлет
+    int n = sqrt(k * 2); // Пытаемся найти наибольшее n, такое что n*(n+1)/2 <= k
 
-    cout << total_time << endl;
+    if (n * (n + 1) / 2 == k)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
 
     return 0;
 }
-
-

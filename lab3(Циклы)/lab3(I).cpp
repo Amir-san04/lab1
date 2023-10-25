@@ -1,26 +1,22 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
 int main() {
-    int A;
-    cin >> A;
+    int N;
+    cin >> N;
 
-    int prev = 0, curr = 1, next = 1;
-    int n = 1;
+    double sum = 0.0;
+    double factorial = 1.0;
 
-    while (next <= A) {
-        if (next == A) {
-            cout << n << endl;
-            return 0;
-        }
-        n++;
-        prev = curr;
-        curr = next;
-        next = prev + curr;
+    for (int i = 0; i <= N; ++i) {
+        if (i > 0)
+            factorial *= i;
+        sum += 1.0 / factorial;
     }
 
-    cout << -1 << endl;
+    cout << fixed << setprecision(5) << sum << endl;
 
     return 0;
 }
+
